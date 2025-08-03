@@ -1,0 +1,408 @@
+
+body {
+    background-color: rgb(238, 148, 148);
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* tránh tràn ngang */
+    position: relative;
+}
+@media (max-width: 768px) {
+
+    .container  {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* left: 0%; */
+    }
+    .gift_box {
+        left: 10%;
+    }
+    .text {
+        width: 90%;
+        left: 0%;
+    }
+
+    .heading {
+        font-size: 40px;
+        left: 10%;
+    }
+
+    .img {
+        width: 90%;
+        height: auto;
+        left: 5%;
+    }
+
+    .cake {
+        
+        left: -50%;
+    }
+
+    .card {
+        left: 40%;
+    }
+}
+
+.drop {
+    position: absolute;
+    top: -10%;
+    /* width: 50px;
+    height: 50px; */
+    /* border-radius: 60%; */
+    /* background-color: #b42727; */
+    z-index: 0;
+    animation: balloon 10s  forwards;
+}
+@keyframes balloon {
+    0%{
+        transform: translateY(0) rotate(90deg);
+    }
+    90%{
+        transform: translateY(1000px) rotate(-90deg);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.gift_box{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(236, 73, 73);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+}
+.gift_box::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 200px;
+    background-color: rgb(242, 231, 77);
+    z-index: 1;
+
+    
+}
+.gift_box::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    box-shadow: inset 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.click {
+    position: absolute;
+    height: 100px;
+    width: 340px;
+    background-color: rgb(236, 73, 73);
+    z-index: 3;
+    top: -100px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+.click.active {
+    transform: translateY(-100px);
+    animation: active 2s forwards;
+
+}
+.click::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 40px;
+    background-color: rgb(242, 231, 77);
+    top: 30%;
+}
+.click::after {
+    position: absolute;
+    content: "";
+    border-left: 70px solid rgb(242, 231, 77);
+    border-right: 70px solid rgb(242, 231, 77);
+    border-top: 40px solid transparent;
+    border-bottom: 20px solid rgb(242, 231, 77);
+    top: -60px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+@keyframes active {
+    0%{
+        transform:  translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform:  translateY(-250px) rotate(-60deg) translateX(-100px) translateY(-100px);
+        opacity: 0;
+    }
+}
+
+.letter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: #521a1a;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+}
+
+.cake {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+.cake .holder {
+    background-color: aliceblue;
+    width: 450px;
+    height: 150px;
+    border-radius: 60%;
+    position: absolute;
+}
+.cake1 {
+    background-color: rgb(243, 216, 180);
+    position: absolute;
+    width: 350px;
+    height: 150px;
+    left: 50px;
+    top: -30px;
+    z-index: 1;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    /* box-shadow: inset -70px 2px rgba(245, 243, 243, 0.7); */
+}
+.cake1::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(51, 36, 12);
+    height: 100px;
+    width: 350px;
+    top: -50px;
+    border-radius: 60%;
+    z-index: 4;
+    
+}
+.cake2 {
+    background-color: rgb(243, 216, 180);
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    left: 75px;
+    top: -100px;
+    z-index: 6;
+    border-bottom-left-radius: 55%;
+    border-bottom-right-radius: 55%;
+}
+.cake2::before {
+    content: "";
+    text-align: center;
+    position: absolute;
+    background-color: rgb(238, 219, 165);
+    height: 100px;
+    width: 300px;
+    top: -50px;
+    border-radius: 60%;
+    z-index: 5;
+}
+.cake2::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    background-color: rgb(231, 71, 71);
+    border-radius: 50% 50% 50% 50%/ 0 0 100% 100%;
+    box-shadow: 30px 20px rgb(231, 71, 71), 60px 10px rgb(231, 71, 71), 90px 20px rgb(231, 71, 71), 130px 35px rgb(231, 71, 71), 160px 20px rgb(231, 71, 71), 190px 20px rgb(231, 71, 71),220px 10px rgb(231, 71, 71),250px 20px rgb(231, 71, 71), 260px 2px rgb(231, 71, 71);
+
+}
+.cake3 {
+    position: absolute;
+    width: 250px;
+    height: 70px;
+    background-color: rgb(238, 128, 128);
+    z-index: 7;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    top: -150px;
+    left: 100px;
+    
+}
+.cake3::before {
+    position: absolute;
+    content: "";
+    z-index: 8;
+    height: 50px;
+    width: 250px;
+    background-color: #f3dcaa;
+    border-radius: 60%;
+    top: -25px;
+}
+.cake3::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(231, 71, 71);
+    border-radius: 50% 50% 50% 50%/ 0 0 100% 100%;
+    box-shadow: 50px 20px rgb(231, 71, 71), 100px 10px rgb(231, 71, 71), 150px 15px rgb(231, 71, 71), 190px 0px rgb(231, 71, 71);
+}
+.chocolate {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(51, 36, 12);
+    border-radius: 50% 50% 50% 50%/ 0% 0% 100% 100%;
+    left: 50px;
+    top: -30px;
+    z-index: 1;
+    box-shadow: 50px 20px rgb(51, 36, 12), 100px 10px rgb(51, 36, 12), 150px 30px rgb(51, 36, 12), 200px 20px rgb(51, 36, 12), 250px 35px rgb(51, 36, 12), 290px 0px rgb(51, 36, 12);
+}
+.candle {
+    position: absolute;
+    z-index: 7;
+    background-color: #dd3a3a;
+    height: 100px;
+    width: 20px;
+    top: -250px;
+    left: 210px;
+    border-radius: 5px;
+}
+.flame {
+    position: absolute;
+    width: 5px;
+    height: 40px;
+    background-color: #000000;
+    top: -290px;
+    left: 217px;
+    z-index: 8;
+}
+.flame::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 45px;
+    background-color: #e67d38;
+    border-radius: 60%;
+    top: -15px;
+    left: -7px;
+    box-shadow: 0px -10px 20px 10px #f0875d;
+    
+}
+.flame::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 45px;
+    background-color: #eb6c17;
+    border-radius: 60%;
+    top: -15px;
+    left: -7px;
+    box-shadow: 0px -10px 20px 10px #e2551d;
+    animation: flame 1s infinite;
+    
+}
+@keyframes flame {
+    0%{
+        transform: rotateY(-90deg) scale(0.4);
+    }
+    100%{
+        transform: scale(0.6);
+    }
+}
+.card {
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    background-color: #e22f2f;
+    z-index: 20;
+    animation: card 1s infinite;
+    left: 51%;
+
+}
+.card::before {
+    content: "";
+    position: absolute;
+    border-bottom: 10px solid transparent;
+    border-top: 20px solid #f09d9d;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+}
+
+@keyframes card {
+    0%{
+        transform: rotate(0);
+    }
+    15%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(-20deg);
+    }
+    45%{
+        transform: rotate(10deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(10deg);
+    }
+    90%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+}
+.text {
+    position: absolute;
+    z-index: 20;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(238, 195, 206);
+    top: 0px;
+    left: 45%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 5px rgba(247, 82, 82, 0.7);
+    font-size: 20px;
+    font-family: cursive;
+    color: rgb(248, 84, 84);
+    text-align: center;
+    opacity: 0;
+
+
+
+}
+
+h4 {
+    text-align: left;
+    font-size: 15px;
+    color: #000;
+}
+
+
+
+
+
+
