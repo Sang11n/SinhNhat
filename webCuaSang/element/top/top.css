@@ -1,0 +1,76 @@
+.nav-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+
+}
+.logo {
+    flex: 0.7;
+    margin: 60px 20px;
+}
+.menu {
+    flex: 2.5;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 30px;
+    
+}
+.menu>li {
+    list-style: none;
+    
+    
+    
+}
+.menu:hover>li:hover {
+    background-color: rgb(236, 211, 126);
+    border-radius: 10px;
+    
+}
+.menu>li>a {
+    text-decoration: none;
+    color: #000;
+}
+.menu>li>ul {
+    background-color: rgb(247, 238, 238);
+    box-shadow: inset -5px -5px rgba(27, 27, 27, 0.1);
+    list-style: none;
+    font-size: 30px;
+    position: absolute;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    z-index: 1;
+    
+}
+.menu>li>ul>li {
+    margin: 20px 10px 10px ;
+    
+}
+a {
+    text-decoration: none;
+    color: #070707;
+}
+.search {
+    flex: 0.7;
+    margin-left: 100px;
+    
+}
+.search>input {
+    width: 200px;
+    height: 30px;
+}
+.search>input::placeholder {
+    font-size: 20px;
+    padding-left: 10px;
+}
+.login {
+    margin-right: 30px;
+}
+.icon {
+    width: 60px;
+}
+
+

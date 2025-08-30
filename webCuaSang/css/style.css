@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#lvOne {
+    height: 200px;
+    width: 100%;
+    background-color: rgb(255, 253, 251);
+}
+#lvTwo {
+    min-height: 700px;
+    width: 100%;
+    background-color: rgb(211, 211, 206);
+    float: left;
+    border-top: 3px solid #703f3f;
+}
+#lvTwo> .itemViewHangHoa {
+    width: 600px;
+    height: 400px;
+    background-color: rgb(230, 236, 236);
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    padding: 30px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.2);
+    float: left;
+}
+#lvTwo> .itemViewHangHoa> .tenHangHoa {
+    height: 70px;
+    width: 150px; 
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 50px;
+    
+}
+#lvTwo> .itemViewHangHoa> .imgHangHoa {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    height: 75%;
+    width: 55%;
+
+}
+#lvTwo:hover> .itemViewHangHoa:hover> .imgHangHoa:hover {
+    width: 57%;
+    height: 77%;
+}
+#lvTwo> .itemViewHangHoa> .giaBan {
+    position: absolute;
+    left: 40px;
+    top: 150px;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+#lvTwo> .itemViewHangHoa> .iconBuy {
+    position: absolute;
+    bottom: 70px;
+    left: 200px;
+    width: 40px;
+    
+}
+#lvTwo:hover> .itemViewHangHoa:hover> .iconBuy:hover {
+    left: 195px;
+    width: 50px;
+}
+
+#lvTwo> .itemViewHangHoa> .iconOrder {
+    position: absolute;
+    left: 20px;
+    bottom: 70px;
+    height: 40px;
+    width: 150px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+#lvTwo:hover> .itemViewHangHoa:hover> .iconOrder:hover {
+    height: 45px;
+    width: 155px;
+    font-size: 30px;
+    
+}
+#lvFore {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+}
+
+#lvFore>.information {
+    position: absolute;
+    left: 100px;
+    font-size: 20px;
+}
+#lvFore>.about {
+    position: absolute;
+    left: 45%;
+    font-size: 20px;
+}
+#lvFore>.connect {
+    position: absolute;
+    right: 100px;
+    font-size: 20px;
+}
+
+hr {
+    width: 100px;
+    height: 4px;
+    background-color: #1f1e1e;
+}
+h2 {
+    font-weight: bold;
+}
+h3 {
+    font-weight: normal;
+    color: #2b2a2a;
+    font-weight: bold;
+}
+
+
+
+
